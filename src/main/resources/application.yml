@@ -1,0 +1,23 @@
+server:
+  port: 8988
+spring:
+  datasource:
+    username: root
+    password: cxt301===
+    url: jdbc:mysql://localhost:3306/poper
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 47.93.219.222
+    port: 6379
+    password: foobared
+    pool:
+      max-active: 8
+      max-idle: 0
+      max-wait: 300
+    timeout: 300
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:myabtis/mapper/*.xml
+  type-aliases-package: com.sport.peking.poper.bean
+
