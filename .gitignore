@@ -21,8 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
-=======
 
 .idea/
 common/target/classes/
@@ -36,4 +34,3 @@ common/common.iml
 # for mac OS
 .DS_Store
 
->>>>>>> 323914100b4d33e57c6429e16d5488e5fd18e64e
