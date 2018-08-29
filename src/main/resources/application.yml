@@ -4,7 +4,7 @@ spring:
   datasource:
     username: root
     password: cxt301===
-    url: jdbc:mysql://localhost:3306/poper
+    url: jdbc:mysql://47.93.219.222:3306/jade
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
   redis:

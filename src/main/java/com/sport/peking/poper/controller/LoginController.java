@@ -1,6 +1,7 @@
 package com.sport.peking.poper.controller;
 
 
+import com.sport.peking.poper.mapper.JadeMapper;
 import com.sport.peking.poper.util.Result;
 import com.sport.peking.poper.util.SMSUtils;
 import org.slf4j.Logger;
@@ -27,6 +28,9 @@ public class LoginController {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    private JadeMapper jadeMapper;
+
     @GetMapping("/code/send/{phoneNumber}")
     public Result sendCode(@PathVariable("phoneNumber") String phoneNumber) {
 
@@ -38,5 +42,10 @@ public class LoginController {
             LOGGER.error("发生异常：{}，请重试！", e.getMessage());
             return Result.error();
         }
+    }
+
+    @RequestMapping("/jade/all")
+    public Result getAll() {
+        return Result.success(jadeMapper.selectByExample(null));
     }
 }
