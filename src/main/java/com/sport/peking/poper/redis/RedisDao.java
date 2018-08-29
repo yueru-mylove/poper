@@ -39,8 +39,7 @@ public class RedisDao {
     public boolean setMap(Map<String , Object> map) {
 
         try {
-            redisTemplate.opsForHash().putAll(BIG_USER_REDIS_KEY
-                    , map);
+            redisTemplate.opsForHash().putAll(BIG_USER_REDIS_KEY, map);
             logger.info("同步大客户信息到redis 成功！userId【" + map.get("funiqueid")+ "】");
             return true;
         } catch (Exception e) {
